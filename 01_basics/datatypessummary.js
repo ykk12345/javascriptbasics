@@ -33,3 +33,28 @@ const myfunction = function(){  // function
 
 console.log(typeof outsideTemp);  // datatype of null variable is object
 console.log(typeof myfunction); // function object
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\
+
+// memory -> stack and heap 
+// stack (primitive) , heap (Non - primitive)
+
+let myname = "yash kaushik"
+
+let anothername = myname
+anothername = "yash kumar kaushik"
+console.log(anothername);
+console.log(myname);
+
+let user1 = {
+    email : "user@google.com",
+    upi : "user@ybl"
+}
+
+let user2 = user1  // refernce to user1
+console.log(user2); //{ email: 'user@google.com', upi: 'user@ybl' }
+
+user2.email = "user2@google.com"
+console.log(user2.email); //user2@google.com
+
+console.log(user1.email); //user2@google.com
